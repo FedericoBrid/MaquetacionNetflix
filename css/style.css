@@ -1,0 +1,410 @@
+@font-face {
+  font-family: "Netflix";
+  src: url("../fonts/AvenirNextLTPro-Regular.otf");
+  font-weight: 400px;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Netflix2";
+  src: url("../fonts/AvenirNextLTPro-Bold.otf");
+  font-weight: 700px;
+  font-style: normal;
+}
+
+* {
+  color: #fff;
+  text-decoration: none;
+  margin: 0;
+  font-family: "Netflix";
+}
+
+body {
+  background-color: black;
+  color: #fff;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.header {
+  padding: 15px 15px 100px;
+  position: relative;
+  z-index: 1;
+  background-image: linear-gradient(
+    to bottom,
+    #000 0%,
+    #000 50%,
+    rgba(0, 0, 0, 0.5) 85%,
+    transparent 100%
+  );
+}
+
+.navigation-item {
+  list-style: none;
+}
+
+.navigation {
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.featured {
+  margin-top: -80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.featured video {
+  height: 500px;
+}
+
+.featured-details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(
+    to top,
+    #000 0%,
+    #000 30%,
+    rgba(0, 0, 0, 0.5) 80%,
+    transparent 100%
+  );
+}
+
+.tags {
+  display: flex;
+  gap: 20px;
+  position: relative;
+  bottom: 10px;
+  padding: 0;
+  justify-content: center;
+}
+
+.tag {
+  margin-left: 10px;
+}
+
+.tag:first-child {
+  list-style: none;
+}
+
+.featured-actions {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2em;
+}
+
+.button {
+  text-decoration: none;
+  border: none;
+  background: #fff;
+  color: #000;
+  min-width: 100px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 5px 1em 5px 0.5em;
+  border-radius: 3px;
+  font-family: "Netflix";
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.button::before {
+  display: inline-block;
+  content: "";
+  width: 25px;
+  height: 25px;
+  margin: auto;
+  margin-right: 5px;
+}
+
+.button-secondary {
+  background: transparent;
+  text-decoration: none;
+  border: none;
+  min-width: 100px;
+  cursor: pointer;
+}
+
+.button-secondary::before {
+  display: block;
+  content: "";
+  width: 25px;
+  height: 25px;
+  margin: auto;
+  margin-bottom: 5px;
+}
+
+.plus::before {
+  background-image: url(../images/icons/plus.svg);
+}
+
+.info::before {
+  background-image: url(../images/icons/info.svg);
+}
+
+.play::before {
+  background-image: url(../images/icons/play.svg);
+}
+
+.list-container {
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+.list-item {
+  margin-left: 10px;
+  display: inline-block;
+}
+
+.list-item:first-child {
+  margin: 0;
+}
+
+.list {
+  padding: 0 1em;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1em 0 0;
+}
+
+.tab-list {
+  background-color: #000;
+  display: flex;
+  height: 60px;
+  justify-content: space-around;
+  list-style: none;
+  padding-bottom: 1em;
+}
+
+.tab-list a {
+  color: #6e6e6e;
+}
+
+.icon {
+  fill: #6e6e6e;
+}
+
+span {
+  color: #6e6e6e;
+}
+
+.tab-item {
+  text-align: center;
+}
+
+.tab-item svg {
+  display: block;
+  margin: auto;
+}
+
+.tab-item path {
+  fill: #6e6e6e;
+  font-size: 0.9em;
+}
+
+.tab-item:hover :is(path, span) {
+  fill: #fff;
+  color: #fff;
+}
+
+.navigation2 {
+  display: none;
+}
+
+.img-desktop {
+  display: none;
+}
+
+.featured-details2 {
+  display: none;
+}
+
+.featured-actions2 {
+  display: none;
+}
+
+.list2 {
+  display: none;
+}
+
+.title2 {
+  display: none;
+}
+
+/*version desktop */
+@media screen and (min-width: 950px) {
+  header img {
+    display: none;
+  }
+
+  .header2 {
+    display: flex;
+    align-items: center;
+  }
+
+  .header3 {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .img-desktop {
+    display: inline-block;
+    margin-left: -50px;
+    height: 50px;
+  }
+
+  .featured video {
+    width: 100%;
+    height: 100%;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .navigation2 {
+    display: flex;
+    padding: 20px;
+    margin-left: -60px;
+    font-size: 15px;
+  }
+
+  .navigation2-item {
+    list-style: none;
+    margin-left: 20px;
+  }
+
+  .tags {
+    display: none;
+  }
+
+  .featured-details2 {
+    color: white;
+    display: inline-block;
+  }
+
+  .parrafo {
+    padding-left: 30px;
+    width: 420px;
+  }
+
+  .featured-details2 h2 {
+    margin-top: -400px;
+    font-family: "Netflix2";
+    padding: 0 30px 30px;
+  }
+
+  .featured-actions {
+    display: none;
+  }
+
+  .featured-actions2 {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin-left: 30px;
+  }
+
+  .featured-actions2-icon {
+    padding-left: 20px;
+  }
+
+  .list2 {
+    display: inline-block;
+    margin-left: 1em;
+  }
+
+  .title2 {
+    margin-left: 1em;
+    display: block;
+  }
+
+  .list-container {
+    padding: 1em;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .footer {
+    display: none;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .button1 {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 5px;
+    border-style: none;
+    margin: 20px;
+    font-family: "Netflix2";
+    font-size: large;
+    color: #000;
+    height: 45px;
+    width: 180px;
+  }
+
+  .button1::before {
+    height: 22px;
+    width: 22px;
+    display: block;
+    content: "";
+  }
+
+  .play::before {
+    background-image: url(../images/icons/play.svg);
+  }
+
+  .button2 {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 5px;
+    border-style: none;
+    background-color: #6e6e6e;
+    margin: 20px;
+    font-family: "Netflix2";
+    font-size: large;
+    color: #fff;
+    height: 45px;
+    width: 220px;
+  }
+
+  .button2::before {
+    display: block;
+    content: "";
+    height: 22px;
+    width: 22px;
+  }
+
+  .info2::before {
+    background-image: url(../images/icons/info.svg);
+  }
+}
